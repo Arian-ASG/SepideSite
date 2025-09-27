@@ -2,7 +2,10 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>کارت ویزیت من</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کارت ویزیت سپیده پورنامداریان</title>
+  <!-- 📌 فونت آوسام برای آیکون‌ها -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -10,17 +13,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background: url('') no-repeat center center/cover;
+      min-height: 100vh;
+      background: #ffffff;  /* پس‌زمینه سفید */
     }
 
     .card {
       background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
+      padding: 20px;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       text-align: center;
       width: 320px;
+      max-width: 90%;
       backdrop-filter: blur(5px);
     }
 
@@ -30,7 +34,7 @@
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto 15px;
-      border: 4px solid #e1306c; /* رنگ شبیه استوری اینستاگرام */
+      border: 4px solid #e1306c;
     }
 
     .profile-pic img {
@@ -41,27 +45,40 @@
 
     .card h2 {
       margin: 10px 0 5px;
+      font-size: 1.4rem;
     }
 
     .card p {
       margin: 5px 0 15px;
       color: #555;
+      font-size: 0.95rem;
+    }
+
+    .links {
+      margin-bottom: 12px;
     }
 
     .links a {
-      margin: 0 8px;
+      display: inline-block;
+      margin: 6px;
       text-decoration: none;
       color: white;
-      padding: 8px 14px;
+      padding: 10px 14px;
       border-radius: 10px;
       transition: 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .links a i {
+      margin-left: 6px; /* فاصله آیکون از متن */
     }
 
     .telegram { background: #0088cc; }
     .instagram { background: #e1306c; }
+    .call { background: #28a745; }
 
     .links a:hover {
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
     img.qr {
@@ -69,22 +86,50 @@
       width: 150px;
       height: 150px;
     }
+
+    @media (max-width: 480px) {
+      .profile-pic {
+        width: 90px;
+        height: 90px;
+      }
+      img.qr {
+        width: 120px;
+        height: 120px;
+      }
+      .card h2 {
+        font-size: 1.1rem;
+      }
+      .card p {
+        font-size: 0.85rem;
+      }
+      .links a {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="profile-pic">
-      <img src="images.jpeg" alt="Profile Picture">
+      <img src="https://i.imgur.com/Anij18h.jpeg" alt="Profile Picture">
     </div>
     <h2>سپیده پورنامداریان</h2>
-    <p>روان شناس کودک</p>
+    <p>روانشناس کودک</p>
     
     <!-- QR Code -->
-    <!img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://t.me/username" alt="QR Code">
-    <img class="qr" src="qrcode.png" alt="QR Code">
+    <img class="qr" src="https://i.imgur.com/zIGcfYE.png" alt="QR Code">
+    
     <div class="links">
-      <a href="https://t.me/username" class="telegram" target="_blank">Telegram</a>
-      <a href="https://https://instagram.com/sepide_pournamdarian" class="instagram" target="_blank">Instagram</a>
+      <a href="https://t.me/username" class="telegram" target="_blank">
+        <i class="fab fa-telegram"></i>  تلگرام
+      </a>
+      <a href="https://instagram.com/sepide_pournamdarian" class="instagram" target="_blank">
+        <i class="fab fa-instagram"></i>  اینستاگرام
+      </a>
+      <a href="tel:+989123456789" class="call">
+        <i class="fas fa-phone"></i>  تماس با ما
+      </a>
     </div>
   </div>
 </body>
